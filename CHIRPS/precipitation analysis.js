@@ -77,3 +77,6 @@ var chart = ui.Chart.image.series({
       hAxis: {title: 'Month', gridlines: {count: 12}}
 });
 print(chart);
+
+//  some sections of the scripts in this repository are inpired by open-source learning materials from www.spatialthoughts.com
+
