@@ -265,3 +265,5 @@ for (var year = startYear; year <= endYear; year++) {
   exportImageForYear(year);
 }
 
+//  some sections of the scripts in this repository are inpired by open-source learning materials from www.spatialthoughts.com
+
