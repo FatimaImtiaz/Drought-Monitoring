@@ -50,7 +50,7 @@ var visParams = {
 Map.addLayer(monthlyRainfall.sum().clip(geometry),visParams, 'Long Term')
 Map.addLayer(observedRainfall.sum().clip(geometry), visParams , 'Current')
 
-// Calculate deviation in %
+// deviation from longterm mean
 var deviation = months.map(function(month) {
   var longTermMean = monthlyRainfall
     .filter(ee.Filter.eq('month', month)).first()
@@ -61,7 +61,7 @@ var deviation = months.map(function(month) {
     .set('month', month)
   return deviation
 })
-// Create chart
+// Charting
 var chart = ui.Chart.image.series({
   imageCollection: deviation, 
   region: geometry.geometry(), 
